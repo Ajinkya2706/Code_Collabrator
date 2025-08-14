@@ -1,0 +1,38 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "socket-only": "node start-socket-only.js",
+    "test": "node test-real-time-sync.js",
+    "yjs": "node yjs-server.js",
+    "yjs-dev": "nodemon yjs-server.js",
+    "yjs-simple": "node yjs-server-simple.js",
+    "yjs-start": "node start-yjs.js",
+    "both": "node start-servers.js",
+    "both-dev": "concurrently \"npm run dev\" \"npm run yjs-dev\"",
+    "both-simple": "concurrently \"npm run dev\" \"npm run yjs-start\"",
+    "simple": "node start-simple.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@zegocloud/zego-uikit-prebuilt": "^2.15.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "ws": "^8.16.0",
+    "y-websocket": "^3.0.0",
+    "yjs": "^13.6.8",
+    "zego-zim-web": "^2.16.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.10"
+  }
+}
